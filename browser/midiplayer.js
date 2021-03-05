@@ -216,7 +216,7 @@ var MidiPlayer = (function () {
         return atob;
       }(function (string) {
         if (typeof atob === 'function') return atob(string);
-        return new Buffer(string, 'base64').toString('binary');
+        throw new Error("unsupported");
       })
     }]);
 
@@ -711,26 +711,13 @@ var MidiPlayer = (function () {
       if (typeof eventHandler === 'function') this.on('midiEvent', eventHandler);
     }
     /**
-     * Load a file into the player (Node.js only).
-     * @param {string} path - Path of file.
+     * Load an array buffer into the player.
+     * @param {array} arrayBuffer - Array buffer of file to be loaded.
      * @return {Player}
      */
 
 
     _createClass(Player, [{
-      key: "loadFile",
-      value: function loadFile(path) {
-        {
-          throw 'loadFile is only supported on Node.js';
-        }
-      }
-      /**
-       * Load an array buffer into the player.
-       * @param {array} arrayBuffer - Array buffer of file to be loaded.
-       * @return {Player}
-       */
-
-    }, {
       key: "loadArrayBuffer",
       value: function loadArrayBuffer(arrayBuffer) {
         this.buffer = new Uint8Array(arrayBuffer);

@@ -1,6 +1,13 @@
-# &#9836; MidiPlayerJS
+# &#9836; @tsugehara/MidiPlayerJS
 [![npm version](https://badge.fury.io/js/midi-player-js.svg)](https://badge.fury.io/js/midi-player-js)
 [![Build Status](https://travis-ci.org/grimmdude/MidiPlayerJS.svg?branch=master)](https://travis-ci.org/grimmdude/MidiPlayerJS)
+
+Forked from [MidiPlayerJS](https://github.com/grimmdude/MidiPlayerJS).
+
+Only work it.
+
+- delete use `fs` module code
+- delete use `Buffer` code
 
 MidiPlayerJS is a JavaScript library which reads standard MIDI files and emits JSON events in real time.  This player does not generate any audio, but by attaching a handler to the event emitter you can trigger any code you like which could play audio, control visualizations, feed into a MIDI interface, etc.
 
