@@ -1,4 +1,4 @@
-declare module "midi-player-js" {
+declare module "@tsugehara/midi-player-js" {
     namespace MidiInternal {
         interface Event {
             name:
